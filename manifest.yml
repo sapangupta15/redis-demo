@@ -1,0 +1,14 @@
+
+---
+applications:
+- name: redis-demo1
+  memory: 1024M
+  host: redis-demo1
+  domain: cfapps.io
+  buildpack: java_buildpack
+  path: target/redis-demo-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+  services:
+    - "test-sapan-redis"
+  
